@@ -1,0 +1,25 @@
+---
+title: "Untitled"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Creando un documento en R Studio con R y Python
+<l class="introduccón">
+
+```{r}
+
+x = c(1,2,3,4,5)
+
+```
+```{python}
+import numpy as np
+x = np.array([1,2,3,4,5])
+y = x.sum()
+print(y)
+```
+
+
