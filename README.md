@@ -1,4 +1,7 @@
 # 1.__Dustin.py
-Practice for everything I do
 
-Parte de mis practicas y trabajos que hago
+* my practice, my work and my studies
+
+to watch what libraries you have installed
+
+> pip list
