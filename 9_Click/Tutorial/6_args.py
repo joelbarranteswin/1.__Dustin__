@@ -4,7 +4,14 @@ from pyfiglet import Figlet
 
 #Enter
 @click.group()
+@click.version_option(version="0.0.1-silocydata", prog_name="generator catv, smatv and fo reports")
 def main():
+    """
+    Silocy Data Present:
+
+            Command Line-Interface reports catv, smatv and fo
+    
+    """
     pass
 
 
@@ -16,14 +23,15 @@ def names(name):
 
 
 
-@main.command(name='2')
+
+
+@main.command()
 @click.option('--about')
 def info(about):
-	""" About NLPiffy """
-# STYLED NAME with Figlet
 	f = Figlet(font="slant")
 	print(f.renderText("Silocy Data"))
 
 
 if __name__ == '__main__':
     main()
+

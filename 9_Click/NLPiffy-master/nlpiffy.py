@@ -68,6 +68,39 @@ def tokens(text,tokentype,save):
 			click.secho('Your text was: {}'.format(text),fg='yellow')
 			click.secho('Word Tokens: {}'.format(final_result.words),fg='green')
 
+			# To Be Refactored
+	# if save == 'True':
+	# 	if tokentype == 'word':
+	# 		click.secho('Your text was: {}'.format(text),fg='yellow')
+	# 		click.secho('Word Tokens: {}'.format(final_result.words),fg='green')
+	# 		save_to_json(str(final_result.words))
+
+	# 	elif tokentype == 'sentence':
+	# 		click.secho('Your text was: {}'.format(text),fg='yellow')
+	# 		click.secho('Sentence Tokens : {}'.format(final_result.sentences),fg='green')
+	# 	else:
+	# 		click.secho('Your text was: {}'.format(text),fg='yellow')
+	# 		click.secho('Word Tokens: {}'.format(final_result.words),fg='green')
+	# elif save == 'False':
+	# 	if tokentype == 'word':
+	# 		click.secho('Your text was: {}'.format(text),fg='yellow')
+	# 		click.secho('Word Tokens: {}'.format(final_result.words),fg='green')
+	# 	elif tokentype == 'sentence':
+	# 		click.secho('Your text was: {}'.format(text),fg='yellow')
+	# 		click.secho('Sentence Tokens : {}'.format(final_result.sentences),fg='green')
+	# 	else:
+	# 		click.secho('Your text was: {}'.format(text),fg='yellow')
+	# 		click.secho('Word Tokens: {}'.format(final_result.words),fg='green')
+	# else:
+	# 	if tokentype == 'word':
+	# 		click.secho('Your text was: {}'.format(text),fg='yellow')
+	# 		click.secho('Word Tokens: {}'.format(final_result.words),fg='green')
+	# 	elif tokentype == 'sentence':
+	# 		click.secho('Your text was: {}'.format(text),fg='yellow')
+	# 		click.secho('Sentence Tokens : {}'.format(final_result.sentences),fg='green')
+	# 	else:
+	# 		click.secho('Your text was: {}'.format(text),fg='yellow')
+	# 		click.secho('Word Tokens: {}'.format(final_result.words),fg='green')
 
 
 # Sentiment Analysis
@@ -148,6 +181,8 @@ def read_file(text,analysis):
 @click.option('--about')
 def info(about):
 	""" About NLPiffy """
+	
+# STYLED NAME with Figlet
 	f = Figlet(font="slant")
 	print(f.renderText("NLPiffy CLI"))
 	
@@ -156,3 +191,8 @@ def info(about):
 
 if __name__ == '__main__':
 	main()
+
+
+# By Jesse E.Agbe (JCharis)
+# J-Secur1ty
+# Jesus Saves @JCharisTech

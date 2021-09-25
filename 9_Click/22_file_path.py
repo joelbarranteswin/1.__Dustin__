@@ -1,10 +1,15 @@
 import click
+from pathlib import Path
+
+
+
 
 @click.command()
-@click.argument('filename', type=click.Path(exists=True))
+@click.option('--filename', type=click.Path(exists=True))
 def touch(filename):
     """Print FILENAME if the file exists."""
-    click.echo(click.format_filename(filename))
+    print(Path(filename).parent.resolve())
+    # click.echo(click.format_filename(filename))
 
 if __name__ == '__main__':
     touch()
