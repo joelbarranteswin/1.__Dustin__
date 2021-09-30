@@ -4,7 +4,7 @@ import click
 @click.command()
 @click.argument('number1', type=int)
 @click.argument('number2', type=int)
-@click.argument('operador')
+@click.argument('operador',default='suma')
 # ,default='suma',type=click.Choice(['suma','resta','division','multiplicacion']))
 
 def main(number1, number2, operador):
@@ -18,7 +18,7 @@ def main(number1, number2, operador):
         resultado = number1 / number2
     elif operador=='multiplicacion':
         resultado = number1 * number2    
-    click.echo("el resultado es ", resultado)
+    click.echo("el resultado es {}".format(resultado)) #tener en cuenta que no funciona como un print
 
 if __name__ == "__main__":
     main()
