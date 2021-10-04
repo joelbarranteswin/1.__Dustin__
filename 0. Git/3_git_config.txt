@@ -1,0 +1,8 @@
+configuracion del username
+git config --global user.name "joelbarranteswin"
+
+configuracion del gmail
+git config --global user.email joelbarrantespalacios@gmail.gmail
+
+ver todas las configuraciones
+git config --list
