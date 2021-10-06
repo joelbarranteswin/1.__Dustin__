@@ -1,19 +1,19 @@
 Entrar al git config
-cd .git
-cat config (las configuraciones)
-cat HEAD  (hacia donde estamos mandando)
+> cd .git
+> cat config (las configuraciones)
+> cat HEAD  (hacia donde estamos mandando)
 
 crear un documento en el git en sexagecimal
 echo "Hola caracola" | git hash-object --stdin
 echo "Hola caracola" | shasum
 
 ver el contenido
-git cat-file -p fd7524bf
-git cat-file -t fd7524bf
-git cat-file -s fd7524bf
+> git cat-file -p fd7524bf
+> git cat-file -t fd7524bf
+> git cat-file -s fd7524bf
 
 crear un fichero, y guardardo en el repositorio local
-echo "Hola 2" > segundo.txt
+> echo "Hola 2" > segundo.txt
 > git hash-object segundo.txt -w
 > git cat-file -p 76470cc71
 > git cat-file -t 76470cc71

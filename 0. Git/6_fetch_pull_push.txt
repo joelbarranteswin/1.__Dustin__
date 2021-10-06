@@ -1,0 +1,50 @@
+clonar un repositorio (usar https)
+ > git clone
+
+nombre del repositorio local y remoto
+ > git remote
+
+opciones del repositorio con el repositorio
+ > git remote -v
+
+ver las ramas o branchs
+ > git branch
+
+sirve para ver los branch del git repository
+ > git branch -a
+
+ver las ramas remotas relacionado a nuestro repositorio
+ > git branch -r
+
+rama principal y a cual esta relacionada
+ > git branch -vv
+---------------------------------------------------------
+para actualizar los cambios hechos en el repositorio online
+trae del reporitorio online al git repositorio local
+ > git fetch
+
+para ver toda la informacion del origin
+nos ayuda a ver si esta actualizado o no
+ > git remote show origin
+
+para cambiar al branch de repositorio online
+simplemente usar el nombre del branch del repositorio web
+ > git checkout name-of-branch
+
+nos mustra informacion si esta actualizado nuestro repositorio
+ademas trae del git repository web al git repository local
+ > git fetch -v (v)
+
+del repositorio local al working directory
+ > git pull
+
+muestra la informacion y agrega del repositorio local
+al working directory(up-to-date)
+ > git pull -v
+
+llevar del repositorio local al repositorio web
+ > git push
+
+si se crea un nuevo branch en un repositorio local, simplemente 
+subir todo el codigo y hacer un 
+>git push   (se lanzara un codigo de reocmendacion, solo usarlo)
