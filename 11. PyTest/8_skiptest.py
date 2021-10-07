@@ -2,8 +2,8 @@ import pytest
 import sys
 
 #si es verdadero, entonces salta los testing
-pytestmark = pytest.mark.skipif(sys.platform != 'win32',
-                        reason = "will run only windows")
+# pytestmark = pytest.mark.skipif(sys.platform != 'win32',
+                        # reason = "will run only windows")
 
 const = 9/5
 def cent_to_fah(cent=0):
