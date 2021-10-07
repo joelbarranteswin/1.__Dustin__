@@ -47,4 +47,9 @@ llevar del repositorio local al repositorio web
 
 si se crea un nuevo branch en un repositorio local, simplemente 
 subir todo el codigo y hacer un 
->git push   (se lanzara un codigo de reocmendacion, solo usarlo)
+> git push   (se lanzara un codigo de reocmendacion, solo usarlo)
+
+
+guardar working directory al git repository en el branch
+> git stash
+
