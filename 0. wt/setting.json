@@ -1,0 +1,129 @@
+{
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions": 
+    [
+        {
+            "command": 
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "keys": "ctrl+c"
+        },
+        {
+            "command": "find",
+            "keys": "ctrl+shift+f"
+        },
+        {
+            "command": "paste",
+            "keys": "ctrl+v"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "keys": "alt+shift+d"
+        }
+    ],
+    "copyFormatting": "none",
+    "copyOnSelect": false,
+    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "profiles": 
+    {
+        "defaults": 
+        {
+            // "acrylicOpacity": 0.7,
+            // "useAcrylic": true
+            //make change here
+            "name": "Dustin",
+            "colorScheme": "Sakura",
+            "fontFace": "Source Code Pro for Porwerline",
+            "fontSize": 10,
+            "icon": "C:\\Users\\HP\\Desktop\\icon.png",
+            "backgroundImage": "C:\\Users\\HP\\Desktop\\wallpaper.jpg",
+            "backgroundImageOpacity": 0.5,
+            "startingDirectory": "C:\\Users\\HP\\Desktop"
+        },
+        "list": 
+        [
+            {
+                "commandline": "powershell.exe",
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "name": "Windows PowerShell"
+            },
+            {
+                "commandline": "cmd.exe",
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": false,
+                "name": "S\u00edmbolo del sistema"
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": false,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            }
+        ]
+    },
+    "schemes": [
+        {
+            "name": "Sakura",
+            "black": "#000000",
+            "red": "#d52370",
+            "green": "#41af1a",
+            "yellow": "#bc7053",
+            "blue": "#6964ab",
+            "purple": "#c71fbf",
+            "cyan": "#939393",
+            "white": "#998eac",
+            "brightBlack": "#786d69",
+            "brightRed": "#f41d99",
+            "brightGreen": "#22e529",
+            "brightYellow": "#f59574",
+            "brightBlue": "#9892f1",
+            "brightPurple": "#e90cdd",
+            "brightCyan": "#eeeeee",
+            "brightWhite": "#cbb6ff",
+            "background": "#18131e",
+            "foreground": "#dd7bdc",
+            "selectionBackground": "#c05cbf",
+            "cursorColor": "#ff65fd"
+        },
+        
+        {
+            "name": "SeaShells",
+            "black": "#17384c",
+            "red": "#d15123",
+            "green": "#027c9b",
+            "yellow": "#fca02f",
+            "blue": "#1e4950",
+            "purple": "#68d4f1",
+            "cyan": "#50a3b5",
+            "white": "#deb88d",
+            "brightBlack": "#434b53",
+            "brightRed": "#d48678",
+            "brightGreen": "#628d98",
+            "brightYellow": "#fdd39f",
+            "brightBlue": "#1bbcdd",
+            "brightPurple": "#bbe3ee",
+            "brightCyan": "#87acb4",
+            "brightWhite": "#fee4ce",
+            "background": "#09141b",
+            "foreground": "#deb88d",
+            "selectionBackground": "#1e4962",
+            "cursorColor": "#fca02f"
+        }
+    ],
+    "startOnUserLogin": true,
+    "keybindings": [
+        {
+            "command": "newTab",
+            "keys": ["ctrl+a"]
+        }
+        
+    ]
+}

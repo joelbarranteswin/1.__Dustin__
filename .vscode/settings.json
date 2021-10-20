@@ -1,0 +1,7 @@
+{
+    "python.testing.pytestArgs": [
+        "0_Advanced_Python"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}

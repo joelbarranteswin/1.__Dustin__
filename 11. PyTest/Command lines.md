@@ -14,6 +14,8 @@
 
 buscar funciones por nombre, usando "or, and , and not"
 
+recordar que se debe usar or en un name_testing para cada script
+
 > pytest -v -k "name_part_script or function_name"
 >
 > pytest -v -k "name_part_script or function_name" --tb=no
@@ -66,4 +68,8 @@ then run test in terminal
 
 12. test just a function naming it
 
-pytest -v name_script.py :: name_of_function.py
+> pytest -v name_script.py :: name_of_function.py
+
+13. test in each function or class
+
+> pytest -v  name_script.py --setup-show -s

@@ -7,7 +7,7 @@ def test_strjoin():
     l2 = ['python', 'pytest and automation']
     assert ' '.join(l1) == s1
 
-#si el assert geenra un error se levanata como XFAIL
+#si el assert genera un error,el mark levanata el error (assert) como XFAIL
 # @pytest.mark.xfail(reason = "error conocido")
 @pytest.mark.xfail(raises=IndexError, reason = "error conocido")
 def test_str04():

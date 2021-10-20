@@ -1,4 +1,5 @@
 import pytest
+pytestmark = [pytest.mark.smoke, pytest.mark.strtest]
 
 @pytest.mark.sanity
 def test_str01():
