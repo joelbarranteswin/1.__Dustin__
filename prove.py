@@ -5,10 +5,10 @@ class Item:
     pay_rate = 0.8  # The pay rate after 20% discount
     all = []
 
-    def __init__(self, name: str, price: float, quantity=0):
+    def __init__(self, name: str, price: float, quantity. float=0):
         # Run validations to the received arguments
-        assert price >= 0, f"Price {price} is not greater than or equal to zero!"
-        assert quantity >= 0, f"Quantity {quantity} is not greater or equal to zero!"
+        assert price >= 0, f"{price} is not greater than or equal to zero!"
+        assert quantity >= 0, f"{quantity} is not greater or equal to zero!"
 
         # Assign to self object
         self.name = name
@@ -38,7 +38,7 @@ class Item:
             )
 
     @staticmethod
-    def is_integer(num):
+    def is_integer(num: int) -> bool:
         # We will count out the floats that are point zero
         # For i.e: 5.0, 10.0
         if isinstance(num, float):
@@ -50,9 +50,7 @@ class Item:
             return False
 
     def __repr__(self):
-        return (
-            f"{self.__class__.__name__}('{self.name}', {self.price}, {self.quantity})"
-        )
+        return f"{self.name}', {self.price}, {self.quantity}"
 
 
 class Phone(Item):
@@ -64,7 +62,7 @@ class Phone(Item):
         # Run validations to the received arguments
         assert (
             broken_phones >= 0
-        ), f"Broken Phones {broken_phones} is not greater or equal to zero!"
+        ), f"{broken_phones} is not greater or equal to zero!"
 
         # Assign to self object
         self.broken_phones = broken_phones
@@ -74,5 +72,3 @@ phone1 = Phone("jscPhonev10", 500, 5, 1)
 
 print(Item.all)
 print(Phone.all)
-
-# DDD
