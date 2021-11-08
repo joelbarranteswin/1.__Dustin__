@@ -1,9 +1,0 @@
-en:
-  level_id: Piso
-  unit_id: N° Depto
-  distance_to_soti: Distancia Red Troncal
-  distance_to_distribution_board: Distancia Red Lateral
-  number_of_cables: N° cables
-  cables_setup: Configuración Cables
-  total_cable_attenuation: Atenuación Total Cable
-  total_unit_attenuation: Atenuación Total Unidad
