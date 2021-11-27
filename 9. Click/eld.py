@@ -26,7 +26,6 @@ API_ENDPOINT = 'https://evaluador-ley-ductos-staging-dsr4vgyiua-uc.a.run.app'
 #API_ENDPOINT = 'https://evaluador-ley-ductos-dsr4vgyiua-uc.a.run.app'
 
 
-
 # load_eld_project_from_excel_service_factory = LoadEldProjectFromExcelServiceFactory()
 # eld_project_report_to_excel_service = EldProjectReportToExcelService()
 
@@ -39,6 +38,7 @@ def coro(f):
 
     return wrapper
 
+
 def exception_handler(func):
     def inner_function(*args, **kwargs):
         try:
@@ -48,12 +48,10 @@ def exception_handler(func):
             return
         except Exception as err:
             logging.debug("Error", err)
-            error_message = err.to_json() if kwargs["result_json"] else err.to_str()
+            error_message = err.to_json(
+            ) if kwargs["result_json"] else err.to_str()
             click.echo(error_message, err=True)
     return inner_function
-
-
- 
 
 
 @click.group()
@@ -86,7 +84,6 @@ def to_json(project_path, catalog, path_out, result_json):
         click.echo(json.dumps({"success": True}))
 
 
-
 @cli.command(name="login")
 @click.option("--endpoint", "-e", default=API_ENDPOINT, help="Cloud Endpoint")
 @click.option("--username", "-u", required=True, help="Cloud Username")
@@ -96,16 +93,17 @@ def to_json(project_path, catalog, path_out, result_json):
 @coro
 async def login(endpoint, username, password, result_json):
     eld_rits_reports_api_service = EldRitsReportsApiService(
-                                eld_project_report_to_excel_service=eld_project_report_to_excel_service,
-                                endpoint=endpoint)
+        eld_project_report_to_excel_service=eld_project_report_to_excel_service,
+        endpoint=endpoint)
     crendentials = {"username": username, "password": password}
     async with aiohttp.ClientSession() as session:
         await eld_rits_reports_api_service.login(
-                        session=session,
-                        crendentials=crendentials,
-                    )
+            session=session,
+            crendentials=crendentials,
+        )
         if result_json:
             click.echo(json.dumps({"success": True}))
+
 
 @cli.command(name="project")
 @click.argument("project-path", type=click.Path(exists=True))
@@ -113,16 +111,17 @@ async def login(endpoint, username, password, result_json):
 @click.option("--endpoint", "-e", default=API_ENDPOINT, help="Cloud Endpoint")
 @click.option("--username", "-u", required=True, help="Cloud Username")
 @click.option("--password", "-p", required=True, help="Cloud Password")
-@click.option("--rits", "-r", type=click.Choice(['catv:backbones', 'catv:amplifiers', 'smatv:backbones','smatv:amplifiers', 'fo'], case_sensitive=False), default=("catv:backbones", "catv:amplifiers", "smatv:backbones", "smatv:backbones", "fo"), multiple=True, help="List of RITs to compute ex: -r catv -r smatv")
+@click.option("--rits", "-r", type=click.Choice(['catv:backbones', 'catv:amplifiers', 'smatv:backbones', 'smatv:amplifiers', 'fo'], case_sensitive=False), default=("catv:backbones", "catv:amplifiers", "smatv:backbones", "smatv:backbones", "fo"), multiple=True, help="List of RITs to compute ex: -r catv -r smatv")
 @click.option("--path-out", "-o", type=click.Path(exists=True, file_okay=False), default=None, help="Path to Folder for save Project Excel File")
 @click.option('--result-json', default=False, is_flag=True)
 @exception_handler
 @coro
 async def compute_eld_project(project_path, catalog, endpoint, username, password, rits, path_out, result_json):
     eld_rits_reports_api_service = EldRitsReportsApiService(
-                                eld_project_report_to_excel_service=eld_project_report_to_excel_service,
-                                endpoint=endpoint)
-    excel_report_path_out = None if path_out == None else path_out.replace('\\', '/')
+        eld_project_report_to_excel_service=eld_project_report_to_excel_service,
+        endpoint=endpoint)
+    excel_report_path_out = None if path_out == None else path_out.replace(
+        '\\', '/')
     if excel_report_path_out == None:
         excel_report_path_out_list = project_path.replace('\\', '/').split("/")
         excel_report_path_out_list.pop()
@@ -147,7 +146,7 @@ async def compute_eld_project(project_path, catalog, endpoint, username, passwor
         if "catv:amplifiers" in rits:
             coroutines.append(
                 eld_rits_reports_api_service.compute_catv_rit_report(
-                    session=session, 
+                    session=session,
                     crendentials=crendentials,
                     eld_project_dict=eld_project_dict,
                     rit_strategy="AMPLIFIERS",
@@ -190,7 +189,8 @@ async def compute_eld_project(project_path, catalog, endpoint, username, passwor
     has_valid_result = False
     for result in results:
         if "exception" in result.keys():
-            result_dict[result["rit"]] = {"code": result["exception"].code, "message": result["exception"].message}
+            result_dict[result["rit"]] = {
+                "code": result["exception"].code, "message": result["exception"].message}
             continue
         if "result" in result.keys():
             if result["result"] == None:
@@ -202,16 +202,19 @@ async def compute_eld_project(project_path, catalog, endpoint, username, passwor
     if has_valid_result:
         with pandas.ExcelWriter(report_name) as writer:  # pylint: disable=abstract-class-instantiated
             eld_project_report_to_excel_service.make_eld_project_report(
-                writer=writer, 
+                writer=writer,
                 eld_project_dict=eld_project_dict,
-                catv_rit_report_backbones_dict=rits_dict["catv:backbones"] if result_dict.get("catv:backbones") == True else None,
-                catv_rit_report_amplifiers_dict=rits_dict["catv:amplifiers"] if result_dict.get("catv:amplifiers") == True else None,
-                smatv_rit_report_backbones_dict=rits_dict["smatv:backbones"] if result_dict.get("smatv:backbones") == True else None,
-                smatv_rit_report_amplifiers_dict=rits_dict["smatv:amplifiers"] if result_dict.get("smatv:amplifiers") == True else None,
+                catv_rit_report_backbones_dict=rits_dict["catv:backbones"] if result_dict.get(
+                    "catv:backbones") == True else None,
+                catv_rit_report_amplifiers_dict=rits_dict["catv:amplifiers"] if result_dict.get(
+                    "catv:amplifiers") == True else None,
+                smatv_rit_report_backbones_dict=rits_dict["smatv:backbones"] if result_dict.get(
+                    "smatv:backbones") == True else None,
+                smatv_rit_report_amplifiers_dict=rits_dict["smatv:amplifiers"] if result_dict.get(
+                    "smatv:amplifiers") == True else None,
                 fo_rit_report_dict=rits_dict["fo"] if result_dict.get("fo") == True else None)
     if result_json:
         click.echo(json.dumps({"success": True, "data": result_dict}))
-
 
 
 if __name__ == '__main__':

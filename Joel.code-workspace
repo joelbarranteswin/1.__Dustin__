@@ -11,3 +11,13 @@
 		"liveServer.settings.multiRootWorkspaceName": "Joel"
 	}
 }
+
+
+
+
+// "[python]": {
+    
+// 	"editor.defaultFormatter": "ms-python.python",
+// 	"editor.formatOnSave": true
+// },
+// "editor.inlineSuggest.enabled": true
