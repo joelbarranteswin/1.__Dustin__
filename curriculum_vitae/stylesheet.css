@@ -1,0 +1,156 @@
+.col-md-1, .col-md-2, .col-md-3, .col-md-4,
+.col-md-5, .col-md-6, .col-md-7, .col-md-8,
+.col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+  float: left;
+  box-sizing: border-box;
+  padding-left: 2px;
+}
+
+.col-md-1 {width: 8.33%;}
+.col-md-2 {width: 16.66%;}
+.col-md-3 {width: 25%;}
+.col-md-4 {width: 33.33%;}
+.col-md-5 {width: 41.66%;}
+.col-md-6 {width: 50%;}
+.col-md-7 {width: 58.33%;}
+.col-md-8 {width: 66.66%;}
+.col-md-9 {width: 75%;}
+.col-md-10 {width: 83.33%;}
+.col-md-11 {width: 91.66%;}
+.col-md-12 {width: 100%;}
+
+.col {
+  clear: both;
+  display: table;
+}
+
+@media (max-width: 1200px) {
+  .main, .aside, .education, .title-year {
+    width: 100%;
+  }
+}
+
+@media (max-width: 610px) {
+  .google {
+    width: 100%;
+  }
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url('https://fonts.googleapis.com/css?family=Roboto');
+}
+
+body {
+  background-color: #ececec;
+  font-family: Roboto;
+}
+
+.container {
+  margin: 9%;
+  background-color: white;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.imagen {
+  border-radius: 50%;
+  max-width: 20%;
+  clear: both;
+  border: solid #ececec 10px;
+  position: relative;
+  left: 41.66%;
+  top: -90px;
+}
+
+.aside, .main {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.aside {
+  padding-bottom: 5%;
+}
+
+.education  p{
+  background-color: #ececec;
+  padding: 12px;
+  border-radius: 3px;
+}
+
+h2 {
+  color: #f4461b;
+}
+
+p {
+  text-align: justify;
+}
+
+li {
+  padding: 2px;
+}
+
+.skills {
+  background-color: #f4461b;
+  color: white;
+  padding: 3px;
+  margin-bottom: 3px;
+}
+
+.orange {
+  color: #f4461b;
+}
+
+ .gray {
+  color: #808080;
+}
+
+.fa {
+  float: right;
+  box-sizing: border-box;
+  margin-left: 12px;
+}
+
+ .python {
+   width: 100%;
+ }
+
+ .html {
+   width: 80%;
+ }
+
+ .css {
+   width: 60%;
+ }
+
+ .js {
+   width: 40%;
+ }
+
+ .php {
+   width: 25%;
+ }
+
+.idioms {
+  padding-bottom: 4px;
+}
+
+ .line {
+   background-color: #ececec;
+   height: 1px;
+
+ }
+
+.hobbies {
+   display: inline;
+   padding: 9px;
+   background-color: #a24a5d;
+   margin-right: 1%;
+   border: none;
+   color: white;
+ }
+.final {
+  float: right;
+  padding: 10px;
+  color: #7f7f7f;
+}

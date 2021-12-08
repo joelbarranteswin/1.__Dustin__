@@ -56,14 +56,14 @@
 5. Compile Developement dependencies
 ---
    ```
-    pip-compile dev-requirements.in
+   pip-compile dev-requirements.in
    ```
    ```
-    pip-compile requirements.in
+   pip-compile requirements.in
    ```
    
 6. Install dependencies
 ---
    ```
-    pip-sync dev-requirements.txt requirements.txt
+   pip-sync dev-requirements.txt requirements.txt
    ```

@@ -2,6 +2,7 @@ from beampy import *
 
 doc = document()
 
+
 with slide():
     maketitle('Beampy a tool to make simple presentation', ['H. Chauvet'])
 
@@ -15,5 +16,5 @@ with slide('Beampy test with animated layers'):
 
 save('./simple_one.pdf')
 
-#To save in pdf just change the above command to the following
-#save('./simple_one.pdf')
+# To save in pdf just change the above command to the following
+# save('./simple_one.pdf')

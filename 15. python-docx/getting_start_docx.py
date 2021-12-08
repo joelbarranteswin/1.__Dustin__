@@ -1,5 +1,7 @@
 from docx import Document
 from docx.shared import Inches
+from pathlib import PurePath, Path, PureWindowsPath
+import os
 
 document = Document()
 
@@ -20,7 +22,10 @@ document.add_paragraph(
     'first item in ordered list', style='List Number'
 )
 
-document.add_picture('monty-truth.png', width=Inches(1.25))
+
+document.add_picture(
+    r'C:\Users\joel_\OneDrive\Documentos\GitHub\1.__Dustin__\15. python-docx\src\image_1.jpg',
+    width=Inches(1.25))
 
 records = (
     (3, '101', 'Spam'),
@@ -41,4 +46,6 @@ for qty, id, desc in records:
 
 document.add_page_break()
 
-document.save('demo.docx')
+full_path = os.path.realpath(__file__)
+path_output = os.path.dirname(full_path)
+document.save(str(PureWindowsPath(path_output, 'demo.docx')))
