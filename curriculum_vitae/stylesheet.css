@@ -115,19 +115,23 @@ li {
    width: 100%;
  }
 
+ .VBA {
+  width: 99%;
+ }
+
  .html {
-   width: 80%;
+   width: 60%;
  }
 
  .css {
    width: 60%;
  }
 
- .js {
-   width: 40%;
+ .sql {
+   width: 60%;
  }
 
- .php {
+ .JS {
    width: 25%;
  }
 
