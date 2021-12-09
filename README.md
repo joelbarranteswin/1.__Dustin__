@@ -21,7 +21,7 @@ It is not that easy to classify subjects in Data Science. Some courses may corre
 
 ## 1. INTRODUCTORY COURSES IN DATA SCIENCE 
 
-- [X] [Curso completo de Estadística descriptiva - RStudio y Python `dplyr`](https://www.udemy.com/course/estadistica-descriptiva/) (by Juan Gabriel Gomilla). ~ 12 hours. 
+- [X] [Curso completo de Estadística descriptiva - RStudio y Python `dplyr`](https://www.udemy.com/course/estadistica-descriptiva/) (by Juan Gabriel Gomilla). ~ 50 hours. 
 
 
 ---
