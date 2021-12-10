@@ -15,4 +15,4 @@ def convert_to_pdf(doc):
 # path_to_word_document = os.path.join(os.getcwd(),
 #                                      'report_1.docx')
 convert_to_pdf(
-    r'C:\Users\joel_\OneDrive\Documentos\GitHub\1.__Dustin__\15. python-docx\report_1.docx')
+    r'C:\Users\joel_\OneDrive\Documentos\GitHub\1.__Dustin__\15. python-docx and docxtpl\report_1.docx')
