@@ -44,3 +44,4 @@ if __name__ == "__main__":
     print(auth_service.db)
     print(container.database())
     print(auth_service.user_service)
+    print(UserService)
