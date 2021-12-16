@@ -20,7 +20,8 @@ class Container(containers.DeclarativeContainer):
 if __name__ == "__main__":
     container = Container()
 
-    container.override_providers(foo=mock.Mock(Foo), bar=mock.Mock(Bar))
+    container.database.override_providers(
+        foo=mock.Mock(Foo), bar=mock.Mock(Bar))
 
     assert isinstance(container.foo(), mock.Mock)
     assert isinstance(container.bar(), mock.Mock)
