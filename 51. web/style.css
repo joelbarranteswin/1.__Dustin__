@@ -6,7 +6,32 @@
 
 html {
     background: url(./src/background.jpg) no-repeat center center;
-    background-size: cover;
-    background-color: cover;
+    /* background-size: cover; */
+    /* background-color: cover; */
     font-size: 62.5%;
+
+}
+
+
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    margin-top: 10%;
+    padding: 0;
+}
+
+.content {
+    font-size: 2.0rem;
+    width: 40%;
+    height: 80%;
+    background-color: rgba(21, 153, 114, 0.5);
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 10%;
+    padding: 4rem;
+
+
 }
