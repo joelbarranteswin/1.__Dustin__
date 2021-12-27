@@ -1,0 +1,3 @@
+
+[pyinstaller]
+  pyinstaller --onefile -w --console  .\darit_cli\cli.py
