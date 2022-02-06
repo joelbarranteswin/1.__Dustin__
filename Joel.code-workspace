@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "./21. pyautocad"
+		},
+		{
+			"path": "./22. PySimpleGui"
 		}
 	],
 	"settings": {
