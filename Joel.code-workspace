@@ -8,10 +8,13 @@
 		},
 		{
 			"path": "./22. PySimpleGui and psgcompiler"
+		},
+		{
+			"path": "./23 pyqt5 adn pyside6"
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "Joel"
+		"liveServer.settings.multiRootWorkspaceName": "22. PySimpleGui and psgcompiler"
 	}
 }
 

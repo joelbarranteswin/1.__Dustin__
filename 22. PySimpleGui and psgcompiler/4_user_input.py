@@ -1,4 +1,4 @@
-import PySimpleGUI as sg
+import PySimpleGUIWeb as sg
 
 # Add some color
 # to the window

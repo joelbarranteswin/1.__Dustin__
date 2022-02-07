@@ -26,4 +26,4 @@ context = {
 }
 
 doc.render(context)
-doc.save(Path(__file__).parent / f"{vendor}-contract.docx")
+doc.save(Path(__file__).parent / f"contract.docx")
