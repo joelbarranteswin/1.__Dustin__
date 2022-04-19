@@ -48,4 +48,4 @@ async def on_message(message):
     await message.channel.send(quote)
 
 # EXECUTES THE BOT WITH THE SPECIFIED TOKEN. TOKEN HAS BEEN REMOVED AND USED JUST AS AN EXAMPLE.
-bot.run("OTY1NzY5NDk0MTc1ODMwMTE3.Yl4A7g.cnnPLF9YxL6FfRtWjVmL1DNtYYM")
+bot.run()
