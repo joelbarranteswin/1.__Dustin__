@@ -3,6 +3,8 @@ import discord
 import os
 import requests
 import json
+
+TOKEN = '*value*'
 # GETS THE CLIENT OBJECT FROM DISCORD.PY. CLIENT IS SYNONYMOUS WITH BOT.
 bot = discord.Client()
 
@@ -48,4 +50,4 @@ async def on_message(message):
     await message.channel.send(quote)
 
 # EXECUTES THE BOT WITH THE SPECIFIED TOKEN. TOKEN HAS BEEN REMOVED AND USED JUST AS AN EXAMPLE.
-bot.run()
+bot.run(TOKEN)
